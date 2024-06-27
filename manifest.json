@@ -1,0 +1,34 @@
+{
+  "manifestVersion": "0.1",
+  "version": "1.0.0",
+  "id": "wazo-portal-websocket",
+  "packageName": "com.wazo.portal.websocket",
+  "productType": "portal",
+  "developer": {
+    "name": "Wazo",
+    "websiteUrl": "https://wazo.io/",
+    "privacyUrl": "https://wazo.io/privacy-policy/"
+  },
+  "name": {
+    "short": "Wazo Websocket Portal",
+    "full": "Wazo Websocket Portal"
+  },
+  "icons": {
+    "color": "./images/wazo-bird-color.svg"
+  },
+  "description": {
+    "short": "Wazo Websocket in Portal",
+    "full": "Wazo Websocket in Portal"
+  },
+  "staticTabs": [
+    {
+      "entityId": "websocket",
+      "context": [
+        "globalSettings"
+      ],
+      "name": "Websocket",
+      "icon": "Dashboard",
+      "contentUrl": "./"
+    }
+  ]
+}
