@@ -61,9 +61,9 @@ function add(data) {
   console.log(`Message received: ${data.name}`);
   const eventsList = document.getElementById('eventsList');
   eventsList.innerHTML += `
-      <tr class="mui--text-center">
-        <td>${data.name}</td>
-        <td>${JSON.stringify(data.data)}</td>
+      <tr class="mui--text-left">
+        <td><b>${data.name}</b></td>
+        <td><pre class="json-container">${prettyPrintJson.toHtml(data.data)}</pre></td>
       </tr>
     `;
 }
@@ -71,7 +71,6 @@ function add(data) {
 (async () => {
   await app.initialize();
   const context = app.getContext();
-  console.log(context);
 
   host = context.app.extra.stack.host;
   token = context.app.extra.stack.session.token;
@@ -80,7 +79,7 @@ function add(data) {
     <table class="mui-table mui-table--bordered">
       <thead>
         <tr>
-          <th>Name</th>
+          <th>Event Name</th>
           <th>Data</th>
         </tr>
       </thead>
