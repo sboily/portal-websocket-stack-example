@@ -58,7 +58,6 @@ function start() {
 }
 
 function add(data) {
-  console.log(`Message received: ${data.name}`);
   const eventsList = document.getElementById('eventsList');
   eventsList.innerHTML += `
       <tr class="mui--text-left">
